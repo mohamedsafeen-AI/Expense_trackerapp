@@ -1,0 +1,153 @@
+:root{
+  --bg:#f6f7ff;
+  --card:#ffffff;
+  --stroke:rgba(11,16,36,.14);
+  --text:#0B1024;
+  --muted:rgba(11,16,36,.65);
+  --accent:#7c3aed;
+  --good:#16a34a;
+  --bad:#ef4444;
+  --shadow: 0 10px 30px rgba(11,16,36,.10);
+  --radius:18px;
+  --ring: rgba(124,58,237,.35);
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+  background:
+    radial-gradient(1200px 800px at 20% 0%, rgba(124,58,237,.18), transparent 60%),
+    radial-gradient(900px 600px at 90% 10%, rgba(6,182,212,.14), transparent 55%),
+    linear-gradient(180deg, #f6f7ff, #eef2ff);
+  color:var(--text);
+}
+
+.shell{max-width:1100px;margin:0 auto;padding:26px 16px 40px;}
+
+.topbar{
+  display:flex;align-items:center;justify-content:space-between;gap:14px;margin-bottom:18px;
+}
+.brand{display:flex;align-items:center;gap:12px;}
+.brandMark{
+  width:46px;height:46px;border-radius:16px;
+  background:linear-gradient(135deg, rgba(124,58,237,.95), rgba(6,182,212,.85));
+  display:flex;align-items:center;justify-content:center;
+  font-weight:900;letter-spacing:.5px;
+  box-shadow:0 14px 30px rgba(124,58,237,.25);
+}
+.brandName{font-weight:900;font-size:20px;line-height:1.1;}
+.brandSub{font-size:13.5px;color:var(--muted);margin-top:3px;}
+
+.content{display:flex;flex-direction:column;gap:18px;}
+
+.hero{
+  border:1px solid var(--stroke);
+  background:rgba(255,255,255,.75);
+  border-radius:var(--radius);
+  padding:16px 16px;
+  box-shadow:var(--shadow);
+}
+.heroTitle{font-size:20px;font-weight:900;margin:0 0 6px;}
+.heroSub{margin:0;color:var(--muted);font-size:15px;line-height:1.4;}
+
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;}
+@media (max-width: 900px){.grid3{grid-template-columns:1fr;}}
+
+.card{
+  border:1px solid var(--stroke);
+  background:rgba(255,255,255,.85);
+  border-radius:var(--radius);
+  padding:16px;
+  box-shadow:var(--shadow);
+}
+
+.statLabel{color:var(--muted);font-weight:700;font-size:16px;margin-bottom:10px;}
+.statValue{font-size:28px;font-weight:950;letter-spacing:-.02em;line-height:1.2;}
+
+.statValue.good{color:var(--good)}
+.statValue.bad{color:var(--bad)}
+
+.formRow{display:flex;flex-direction:column;gap:6px;}
+.formGrid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;}
+@media (max-width: 700px){.formGrid{grid-template-columns:1fr;}}
+
+label{font-size:15px;color:var(--muted);font-weight:700;}
+input,select,button,textarea{font-family:inherit}
+
+input,select{
+  width:100%;
+  padding:12px 12px;
+  border-radius:14px;
+  border:1px solid var(--stroke);
+  background:#fff;
+  color:var(--text);
+  font-size:16px;
+  outline:none;
+}
+
+input:focus,select:focus{
+  box-shadow:0 0 0 4px var(--ring);
+  border-color:rgba(124,58,237,.6);
+}
+
+button{
+  border:1px solid var(--stroke);
+  background:#fff;
+  color:var(--text);
+  padding:12px 14px;
+  border-radius:14px;
+  cursor:pointer;
+  font-weight:800;
+  font-size:16px;
+}
+button:hover{background:rgba(124,58,237,.05)}
+button:disabled{opacity:.7;cursor:not-allowed}
+
+.btnPrimary{
+  border-color:transparent;
+  background:linear-gradient(135deg, rgba(124,58,237,.95), rgba(6,182,212,.85));
+  color:#fff;
+}
+
+.actions{
+  display:flex;gap:12px;align-items:center;justify-content:flex-start;flex-wrap:wrap;
+}
+
+.toast{
+  position:fixed;left:50%;bottom:18px;transform:translateX(-50%);
+  padding:12px 16px;border-radius:999px;
+  border:1px solid var(--stroke);
+  background:rgba(255,255,255,.92);
+  box-shadow:var(--shadow);
+  z-index:9999;
+  font-size:14px;
+}
+.toast-success{border-color:rgba(22,163,74,.35);color:rgba(22,163,74,1)}
+.toast-error{border-color:rgba(239,68,68,.35);color:rgba(239,68,68,1)}
+
+.muted{color:var(--muted)}
+.bigHelp{margin-top:6px;color:var(--muted);font-size:14px;line-height:1.4}
+
+.quickBox{margin-top:12px;padding-top:12px;border-top:1px dashed rgba(11,16,36,.18)}
+.quickBox label{font-size:16px}
+.quickBtn{width:100%;margin-top:10px;padding:14px 14px;font-size:18px;font-weight:950;border-radius:16px}
+#quickIncomeAmount{font-size:22px;font-weight:950}
+
+
+.cardActions{
+  margin-top:14px;
+}
+
+.btnSecondary{
+  width:100%;
+  background:rgba(124,58,237,.06);
+  border-color:rgba(124,58,237,.35);
+  color:rgba(91,33,182,1);
+}
+.btnSecondary:hover{background:rgba(124,58,237,.11)}
+
+
+
+
